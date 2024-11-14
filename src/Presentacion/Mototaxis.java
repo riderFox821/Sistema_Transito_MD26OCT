@@ -399,6 +399,7 @@ public class Mototaxis extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     Asociaciones asociaciones=new Asociaciones();
+    //quiero comitear algo nuevo
     private void listarAsociaciones()
     { 
       modelo=(DefaultTableModel) tbl_Asociaciones.getModel();
