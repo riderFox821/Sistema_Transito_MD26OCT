@@ -5,10 +5,44 @@
  */
 package DataBussinessObject;
 
+import DataAccessObject.ConductoresDAO;
+import DataTransferObject.ConductoresDTO;
+import java.util.List;
+
 /**
  *
  * @author Aaron
  */
 public class Conductores {
+    ConductoresDAO conductoresDAO=new ConductoresDAO(); 
+  ConductoresDTO conductoresDTO;
+  
+  public List<ConductoresDTO> listar()
+  {
+   if(conductoresDAO.listar()!=null)
+   {
+       return conductoresDAO.listar();   
+   }  
+     return null;  
+  }
+  
+   public List<ConductoresDTO> buscarPorLike(String nombreuapellido)
+  {
+      conductoresDTO= new ConductoresDTO();
+      conductoresDTO.setNombres(nombreuapellido);
+      conductoresDTO.setNombres(nombreuapellido);
+      
+      if(conductoresDAO.buscarconLike(conductoresDTO).isEmpty())
+      {
+          return null;
+      
+      }else{
+          if(conductoresDAO.buscarconLike(conductoresDTO)!=null)
+              return conductoresDAO.buscarconLike(conductoresDTO);
+              
+      } 
+            return null;
+  
+  }
     
 }
