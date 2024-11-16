@@ -7,6 +7,7 @@ package DataBussinessObject;
 
 import DataAccessObject.ConductoresDAO;
 import DataTransferObject.ConductoresDTO;
+import DataTransferObject.AsociacionesDTO;
 import java.util.List;
 
 /**
@@ -14,8 +15,9 @@ import java.util.List;
  * @author Aaron
  */
 public class Conductores {
-    ConductoresDAO conductoresDAO=new ConductoresDAO(); 
+   ConductoresDAO conductoresDAO=new ConductoresDAO(); 
   ConductoresDTO conductoresDTO;
+  AsociacionesDTO asociacionesDTO;
   
   public List<ConductoresDTO> listar()
   {
@@ -39,6 +41,25 @@ public class Conductores {
       }else{
           if(conductoresDAO.buscarconLike(conductoresDTO)!=null)
               return conductoresDAO.buscarconLike(conductoresDTO);
+              
+      } 
+            return null;
+  
+  }
+   
+    public List<ConductoresDTO> buscarPorIdAsociacion(int idAsociacion)
+  {
+      conductoresDTO= new ConductoresDTO();
+      asociacionesDTO= new AsociacionesDTO();
+      asociacionesDTO.setIdAsociacion(idAsociacion);
+      
+      if(conductoresDAO.buscar_por_asociacion(conductoresDTO,asociacionesDTO).isEmpty())
+      {
+          return null;
+      
+      }else{
+          if(conductoresDAO.buscar_por_asociacion(conductoresDTO,asociacionesDTO)!=null)
+              return conductoresDAO.buscar_por_asociacion(conductoresDTO,asociacionesDTO);
               
       } 
             return null;

@@ -27,5 +27,25 @@ public class Asociaciones {
    }  
      return null;  
   }
+  public List<AsociacionesDTO> buscarPorLike(String ruc_o_nombre)
+  {
+      asociacionesDTO= new AsociacionesDTO();
+      asociacionesDTO.setNombre(ruc_o_nombre);
+      asociacionesDTO.setRUC(ruc_o_nombre);
+      
+      //System.out.println(asociacionesDTO.getNombre()+" "+asociacionesDTO.getRUC());
+      
+      if(asociacionesDAO.buscarconLike(asociacionesDTO).isEmpty())
+      {
+          return null;
+      
+      }else{
+          if(asociacionesDAO.buscarconLike(asociacionesDTO)!=null)
+              return asociacionesDAO.buscarconLike(asociacionesDTO);
+              
+      } 
+            return null;
+  
+  }
     
 }

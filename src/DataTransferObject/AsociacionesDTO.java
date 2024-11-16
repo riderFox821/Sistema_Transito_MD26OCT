@@ -1,7 +1,7 @@
 package DataTransferObject;
 public class AsociacionesDTO {
    int idAsociacion, idPersona_Representante;
-   String domicilio,ubicacionParadero, nombre, RUC;
+   String domicilio,ubicacionParadero, nombre, RUC, numeroDePermiso, Vigencia;
 
     public AsociacionesDTO() {
     }
@@ -20,6 +20,22 @@ public class AsociacionesDTO {
         this.ubicacionParadero = ubicacionParadero;
         this.nombre = nombre;
         this.RUC = RUC;
+    }
+
+    public String getNumeroDePermiso() {
+        return numeroDePermiso;
+    }
+
+    public void setNumeroDePermiso(String numeroDePermiso) {
+        this.numeroDePermiso = numeroDePermiso;
+    }
+
+    public String getVigencia() {
+        return Vigencia;
+    }
+
+    public void setVigencia(String Vigencia) {
+        this.Vigencia = Vigencia;
     }
 
     public AsociacionesDTO(String domicilio, String ubicacionParadero, String nombre) {

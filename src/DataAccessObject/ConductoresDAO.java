@@ -1,5 +1,6 @@
 package DataAccessObject;
 import DataTransferObject.ConductoresDTO;
+import DataTransferObject.AsociacionesDTO;
 import java.util.List;
 import java.sql.*;
 import java.util.ArrayList;
@@ -99,6 +100,42 @@ public class ConductoresDAO extends Conexion implements Crud<ConductoresDTO>{
                     return lista;
                 } 
     }
+       
+    public List<ConductoresDTO> buscar_por_asociacion(ConductoresDTO conductoresDTO, AsociacionesDTO asociacionesDTO) {
+        List<ConductoresDTO> lista=new ArrayList<ConductoresDTO>();
+                try{
+                    conexion=conectar();
+                     ps=conexion.prepareStatement("select p.Nombres, CONCAT(p.ApellidoPaterno,' ',p.ApellidoMaterno) as apellidos, p.DNI, v.Placa, con.Numero_Licencia from Conductores con\n" +
+                                                    "inner join Personas p\n" +
+                                                    "on con.id_Persona = p.idPersona\n" +
+                                                    "inner join Vehiculos v\n" +
+                                                    "on con.id_Vehiculo = v.idVehiculo\n" +
+                                                    "inner join MiembrosAsociacion ma\n" +
+                                                    "on ma.id_Persona = p.idPersona\n" +
+                                                    "where ma.id_Asociacion = ?");
+                     ps.setInt(1,asociacionesDTO.getIdAsociacion());
+                    //productoDTO=null;
+                    rs=ps.executeQuery();
+                    while(rs.next()){
+                    //ProductoDTO productoDTO=new  ProductoDTO();
+                    conductoresDTO=new ConductoresDTO();    
+                    conductoresDTO.setNombres(rs.getString(1));
+                    conductoresDTO.setApellidos(rs.getString(2));
+                    conductoresDTO.setDNI(rs.getString(3));
+                    conductoresDTO.setPlaca(rs.getString(5));
+                    conductoresDTO.setNumeroLicencia(rs.getString(5));
+                    lista.add(conductoresDTO);
+                    
+                    }
+                }catch(Exception ex){
+                    System.out.println(ex.getMessage());
+                    return null;
+                }
+                finally{
+                    cerrar();
+                    return lista;
+                } 
+    }  
 
     @Override
     public boolean agregar(ConductoresDTO obj) {
