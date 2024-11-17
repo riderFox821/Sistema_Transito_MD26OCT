@@ -8,10 +8,13 @@ package Presentacion;
 import DataBussinessObject.Asociaciones;
 import DataBussinessObject.Conductores;
 import DataBussinessObject.Propietarios;
+import DataBussinessObject.Socios;
 import DataTransferObject.AsociacionesDTO;
 import DataTransferObject.ConductoresDTO;
 import DataTransferObject.PropietariosDTO;
+import DataTransferObject.SociosDTO;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -537,7 +540,7 @@ public class Mototaxis extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nombre", "Apellidos", "DNI", "Placa"
+                "Nombre", "Apellidos", "DNI", "Placa", "vf"
             }
         ));
         jScrollPane11.setViewportView(tbl_socios_filtros);
@@ -664,7 +667,7 @@ public class Mototaxis extends javax.swing.JFrame {
 
     private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
         // TODO add your handling code here:
-        limpiarTabla_asociaciones();
+        limpiarTabla(tbl_Asociaciones_filtros);
     }//GEN-LAST:event_btn_limpiarActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -712,7 +715,7 @@ public class Mototaxis extends javax.swing.JFrame {
         //Producto producto=new Producto();
      if(!txt_buscar_conductor.getText().isEmpty()){
             if(conductores.buscarPorLike(txt_buscar_conductor.getText())!=null){
-             limpiarTabla_conductores();
+             limpiarTabla_conductores_bk();
               modelo=(DefaultTableModel) tbl_conductores.getModel();
               Object[]obj=new Object[4];      
                 for(ConductoresDTO conductoresDTO:conductores.buscarPorLike(txt_buscar_conductor.getText()))
@@ -732,13 +735,13 @@ public class Mototaxis extends javax.swing.JFrame {
             {
              //mensajeNegativo(lblMensaje, lblIcon);
                 lbl_mensaje_conductores.setText("No se encontro");
-                limpiarTabla_conductores();
+                limpiarTabla_conductores_bk();
             }
         }else
         {
          //mensajeNegativo(lblMensaje, lblIcon);
             lbl_mensaje_conductores.setText("Ingresa un valor");
-            limpiarTabla_conductores();
+            limpiarTabla_conductores_bk();
             listarConductores_bk();
         }
     }//GEN-LAST:event_txt_buscar_conductorKeyReleased
@@ -747,7 +750,7 @@ public class Mototaxis extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(!txt_buscar_asociacion_filtro.getText().isEmpty()){
             if(asociaciones.buscarPorLike(txt_buscar_asociacion_filtro.getText())!=null){
-             limpiarTabla_asociaciones();
+                limpiarTabla(tbl_Asociaciones_filtros);
               modelo=(DefaultTableModel) tbl_Asociaciones_filtros.getModel();
               Object[]obj=new Object[7];      
                 for(AsociacionesDTO asociacionesDTO:asociaciones.buscarPorLike(txt_buscar_asociacion_filtro.getText()))
@@ -771,13 +774,13 @@ public class Mototaxis extends javax.swing.JFrame {
             {
              //mensajeNegativo(lblMensaje, lblIcon);
                 lbl_mensaje_asociaciones.setText("No se encontro");
-                limpiarTabla_asociaciones();
+                limpiarTabla(tbl_Asociaciones_filtros);
             }
         }else
         {
          //mensajeNegativo(lblMensaje, lblIcon);
             lbl_mensaje_asociaciones.setText("Ingresa un valor");
-            limpiarTabla_asociaciones();
+            limpiarTabla(tbl_Asociaciones_filtros);
             listarAsociaciones();
         }
     }//GEN-LAST:event_txt_buscar_asociacion_filtroKeyReleased
@@ -791,10 +794,12 @@ public class Mototaxis extends javax.swing.JFrame {
             //txtIdCliente.setText(tblClientes.getValueAt(fila, 0).toString());
             //txtNombreCliente.setText(tblClientes.getValueAt(fila, 1).toString());
             //txtDNI.setText(tblClientes.getValueAt(fila, 3).toString());
-            limpiarTabla_conductores();
+            limpiarTabla(tbl_conductores_filtros);
             listarConductores(Integer.parseInt(tbl_Asociaciones_filtros.getValueAt(fila, 0).toString()));
-            limpiarTabla_propietarios();
+            limpiarTabla(tbl_propietarios_filtros);
             listarPropietarios(Integer.parseInt(tbl_Asociaciones_filtros.getValueAt(fila, 0).toString()));
+            limpiarTabla(tbl_socios_filtros);
+            listarSocios(Integer.parseInt(tbl_Asociaciones_filtros.getValueAt(fila, 0).toString()));
         }
     }//GEN-LAST:event_tbl_Asociaciones_filtrosMouseClicked
 
@@ -913,7 +918,15 @@ public class Mototaxis extends javax.swing.JFrame {
     Asociaciones asociaciones=new Asociaciones();
     Conductores conductores=new Conductores();
     Propietarios propietarios=new Propietarios();
+    Socios socios=new Socios();
     //quiero comitear algo nuevo
+    private void ocultarColumna(JTable table, int index){
+        table.getColumnModel().getColumn(index).setMinWidth(0);
+        table.getColumnModel().getColumn(index).setMaxWidth(0);
+        table.getColumnModel().getColumn(index).setPreferredWidth(0);
+        table.getColumnModel().getColumn(index).setResizable(false);
+   }
+    
     private void listarAsociaciones()
     { 
       modelo=(DefaultTableModel) tbl_Asociaciones_filtros.getModel();
@@ -929,16 +942,10 @@ public class Mototaxis extends javax.swing.JFrame {
           obj[6]=asociacionesDTO.getVigencia();
           
           modelo.addRow(obj);
+          ocultarColumna(tbl_Asociaciones_filtros, 0);
       }
       tbl_Asociaciones_filtros.setModel(modelo);
     } 
-    private void limpiarTabla_asociaciones() {
-        //System.out.println("Estoy limpiando");
-        modelo = (DefaultTableModel) tbl_Asociaciones_filtros.getModel();
-        modelo.getDataVector().removeAllElements();
-        tbl_Asociaciones_filtros.removeAll();
-        tbl_Asociaciones_filtros.clearSelection();
-   }
     private void listarConductores_bk()
     { 
       modelo=(DefaultTableModel) tbl_conductores.getModel();
@@ -980,13 +987,6 @@ public class Mototaxis extends javax.swing.JFrame {
       }
     } 
     
-    private void limpiarTabla_conductores() {
-        modelo = (DefaultTableModel) tbl_conductores_filtros.getModel();
-        modelo.getDataVector().removeAllElements();
-        tbl_conductores_filtros.removeAll();
-        tbl_conductores_filtros.clearSelection();
-   }
-    
     private void listarPropietarios(int id_asociacion)
     { 
       modelo=(DefaultTableModel) tbl_propietarios_filtros.getModel();
@@ -1007,10 +1007,30 @@ public class Mototaxis extends javax.swing.JFrame {
       }
     } 
     
-    private void limpiarTabla_propietarios() {
-        modelo = (DefaultTableModel) tbl_propietarios_filtros.getModel();
+    private void listarSocios(int id_asociacion)
+    { 
+      modelo=(DefaultTableModel) tbl_socios_filtros.getModel();
+      Object[]obj=new Object[5];
+      if (socios.buscarPorIdAsociacion(id_asociacion)!=null){
+          for(SociosDTO sociosDTO:socios.buscarPorIdAsociacion(id_asociacion))
+            {
+                obj[0]=sociosDTO.getNombre();
+                obj[1]=sociosDTO.getApellido();
+                obj[2]=sociosDTO.getDNI();
+                obj[3]=sociosDTO.getPlaca();
+                obj[4]=sociosDTO.getVigenciaFotocheck();
+                modelo.addRow(obj);
+            }
+            tbl_socios_filtros.setModel(modelo);
+      }else{
+          
+      }
+    } 
+       
+     private void limpiarTabla(JTable tabla ){
+        modelo = (DefaultTableModel) tabla.getModel();
         modelo.getDataVector().removeAllElements();
-        tbl_propietarios_filtros.removeAll();
-        tbl_propietarios_filtros.clearSelection();
+        tabla.removeAll();
+        tabla.clearSelection();
    }
 }
