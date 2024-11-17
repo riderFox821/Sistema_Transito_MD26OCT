@@ -7,8 +7,10 @@ package Presentacion;
 
 import DataBussinessObject.Asociaciones;
 import DataBussinessObject.Conductores;
+import DataBussinessObject.Propietarios;
 import DataTransferObject.AsociacionesDTO;
 import DataTransferObject.ConductoresDTO;
+import DataTransferObject.PropietariosDTO;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -791,6 +793,8 @@ public class Mototaxis extends javax.swing.JFrame {
             //txtDNI.setText(tblClientes.getValueAt(fila, 3).toString());
             limpiarTabla_conductores();
             listarConductores(Integer.parseInt(tbl_Asociaciones_filtros.getValueAt(fila, 0).toString()));
+            limpiarTabla_propietarios();
+            listarPropietarios(Integer.parseInt(tbl_Asociaciones_filtros.getValueAt(fila, 0).toString()));
         }
     }//GEN-LAST:event_tbl_Asociaciones_filtrosMouseClicked
 
@@ -908,6 +912,7 @@ public class Mototaxis extends javax.swing.JFrame {
 
     Asociaciones asociaciones=new Asociaciones();
     Conductores conductores=new Conductores();
+    Propietarios propietarios=new Propietarios();
     //quiero comitear algo nuevo
     private void listarAsociaciones()
     { 
@@ -980,5 +985,32 @@ public class Mototaxis extends javax.swing.JFrame {
         modelo.getDataVector().removeAllElements();
         tbl_conductores_filtros.removeAll();
         tbl_conductores_filtros.clearSelection();
+   }
+    
+    private void listarPropietarios(int id_asociacion)
+    { 
+      modelo=(DefaultTableModel) tbl_propietarios_filtros.getModel();
+      Object[]obj=new Object[5];
+      if (propietarios.buscarPorIdAsociacion(id_asociacion)!=null){
+          for(PropietariosDTO propietariosDTO:propietarios.buscarPorIdAsociacion(id_asociacion))
+            {
+                obj[0]=propietariosDTO.getNombres();
+                obj[1]=propietariosDTO.getApellidos();
+                obj[2]=propietariosDTO.getDNI();
+                obj[3]=propietariosDTO.getPlaca();
+                obj[4]=propietariosDTO.getVigenciaSoat();
+                modelo.addRow(obj);
+            }
+            tbl_propietarios_filtros.setModel(modelo);
+      }else{
+          
+      }
+    } 
+    
+    private void limpiarTabla_propietarios() {
+        modelo = (DefaultTableModel) tbl_propietarios_filtros.getModel();
+        modelo.getDataVector().removeAllElements();
+        tbl_propietarios_filtros.removeAll();
+        tbl_propietarios_filtros.clearSelection();
    }
 }
