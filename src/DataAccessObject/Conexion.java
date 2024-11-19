@@ -4,9 +4,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 public class Conexion {
     protected Connection conexion;
-    String url="jdbc:sqlserver://LAPTOP-FDEOJVKI:1433;databaseName=registro_transito_muni_26OCT";
+    String url="jdbc:sqlserver://HOSMER\\SQLEXPRESS:1433;databaseName=registro_transito_muni_26OCT";
     String user="sa";
-    String password="123456";
+    String password="12345678";
     public Connection conectar()
     {
         try {

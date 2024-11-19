@@ -5,6 +5,7 @@
 package Presentacion;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,12 +34,12 @@ public class Login_Sistem extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        Txtusuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         LoginBtn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        Txtcontraseña = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         exitBtn = new javax.swing.JPanel();
@@ -69,20 +70,18 @@ public class Login_Sistem extends javax.swing.JFrame {
         jLabel5.setText("CONTRASEÑA");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 230, 100));
 
-        jTextField2.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Txtusuario.setBackground(new java.awt.Color(204, 204, 204));
+        Txtusuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                TxtusuarioActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 250, 40));
+        jPanel2.add(Txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 250, 40));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("USUARIO ");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 110, 60));
-
-        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 290, 30));
 
         LoginBtn.setBackground(new java.awt.Color(255, 102, 204));
@@ -104,8 +103,8 @@ public class Login_Sistem extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/userpassword_deusuari_787.png"))); // NOI18N
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 120, 110));
 
-        jPasswordField1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 250, 40));
+        Txtcontraseña.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.add(Txtcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 250, 40));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/8785e6c0-a9c2-4a5c-b732-3bfe240ff22a.jpeg"))); // NOI18N
@@ -179,12 +178,25 @@ public class Login_Sistem extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void TxtusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtusuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_TxtusuarioActionPerformed
 
     private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtnActionPerformed
-        // TODO add your handling code here:
+       
+        String Usuario, pwd;
+         Usuario=Txtusuario.getText();
+         pwd= Txtcontraseña.getText();
+         if(Usuario.equals("muni")&& pwd.equals("12345")){
+             Mototaxis acceso=new Mototaxis();
+             acceso.setVisible(true);
+             this.setVisible(false);
+         }else {
+            JOptionPane.showMessageDialog(null, "Usuario o Contraseña es incorrecta");
+
+         }
+        
+        
     }//GEN-LAST:event_LoginBtnActionPerformed
 
     private void exitBtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnMousePressed
@@ -262,6 +274,8 @@ public class Login_Sistem extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LoginBtn;
+    private javax.swing.JPasswordField Txtcontraseña;
+    private javax.swing.JTextField Txtusuario;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitTxt;
     private javax.swing.JLabel icono;
@@ -273,9 +287,7 @@ public class Login_Sistem extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
