@@ -51,7 +51,7 @@ public class Login_Sistem extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/415732918_698225495778006_1119471731745094111_n-removebg-preview (1).png"))); // NOI18N
-        jPanel2.add(icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 60, 420, 320));
+        jPanel2.add(icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 110, 420, 320));
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 300, 30));
@@ -59,7 +59,7 @@ public class Login_Sistem extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MUNICIPALIDAD 26 DE OCTUBRE ");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, -10, 460, 150));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, 320, 100));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/users_theuser_6177.png"))); // NOI18N
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 130, 130));
@@ -85,8 +85,7 @@ public class Login_Sistem extends javax.swing.JFrame {
         jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 290, 30));
 
         LoginBtn.setBackground(new java.awt.Color(255, 102, 204));
-        LoginBtn.setFont(new java.awt.Font("Felix Titling", 1, 12)); // NOI18N
-        LoginBtn.setForeground(new java.awt.Color(255, 255, 255));
+        LoginBtn.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
         LoginBtn.setText("INICIAR SESSION ");
         LoginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
