@@ -30,6 +30,7 @@ public class Login_Sistem extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         icono = new javax.swing.JLabel();
+        exitTxt = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -43,7 +44,7 @@ public class Login_Sistem extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         exitBtn = new javax.swing.JPanel();
-        exitTxt = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,76 +52,7 @@ public class Login_Sistem extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/415732918_698225495778006_1119471731745094111_n-removebg-preview (1).png"))); // NOI18N
-        jPanel2.add(icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 110, 420, 320));
-
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 300, 30));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("MUNICIPALIDAD 26 DE OCTUBRE ");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, 320, 100));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/users_theuser_6177.png"))); // NOI18N
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 130, 130));
-
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("CONTRASEÑA");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 230, 100));
-
-        Txtusuario.setBackground(new java.awt.Color(204, 204, 204));
-        Txtusuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TxtusuarioActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 250, 40));
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("USUARIO ");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 110, 60));
-        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 290, 30));
-
-        LoginBtn.setBackground(new java.awt.Color(255, 102, 204));
-        LoginBtn.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
-        LoginBtn.setText("INICIAR SESSION ");
-        LoginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                LoginBtnMouseEntered(evt);
-            }
-        });
-        LoginBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginBtnActionPerformed(evt);
-            }
-        });
-        jPanel2.add(LoginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, -1, 50));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/userpassword_deusuari_787.png"))); // NOI18N
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 120, 110));
-
-        Txtcontraseña.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.add(Txtcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 250, 40));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/8785e6c0-a9c2-4a5c-b732-3bfe240ff22a.jpeg"))); // NOI18N
-        jLabel1.setText(" ");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 560, 640));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("USUARIO ");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 110, 60));
-
-        exitBtn.setBackground(new java.awt.Color(255, 255, 255));
-        exitBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                exitBtnMousePressed(evt);
-            }
-        });
+        jPanel2.add(icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 20, 420, 320));
 
         exitTxt.setFont(new java.awt.Font("Segoe UI Semilight", 0, 36)); // NOI18N
         exitTxt.setText("X");
@@ -143,25 +75,90 @@ public class Login_Sistem extends javax.swing.JFrame {
                 exitTxtMousePressed(evt);
             }
         });
+        jPanel2.add(exitTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 0, 59, 62));
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 300, 30));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("MUNICIPALIDAD 26 DE OCTUBRE ");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 320, 100));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/users_theuser_6177.png"))); // NOI18N
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, 130, 130));
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("CONTRASEÑA");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 230, 100));
+
+        Txtusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtusuarioActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 250, 40));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("USUARIO ");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 110, 60));
+        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 290, 30));
+
+        LoginBtn.setBackground(new java.awt.Color(255, 255, 255));
+        LoginBtn.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
+        LoginBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/auto.png"))); // NOI18N
+        LoginBtn.setText("INICIAR SESSION ");
+        LoginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LoginBtnMouseEntered(evt);
+            }
+        });
+        LoginBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginBtnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(LoginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, 210, 60));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/userpassword_deusuari_787.png"))); // NOI18N
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 120, 110));
+        jPanel2.add(Txtcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 250, 40));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/8785e6c0-a9c2-4a5c-b732-3bfe240ff22a.jpeg"))); // NOI18N
+        jLabel1.setText(" ");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 560, 640));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("USUARIO ");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 110, 60));
+
+        exitBtn.setBackground(new java.awt.Color(255, 255, 255));
+        exitBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                exitBtnMousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout exitBtnLayout = new javax.swing.GroupLayout(exitBtn);
         exitBtn.setLayout(exitBtnLayout);
         exitBtnLayout.setHorizontalGroup(
             exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(exitBtnLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(exitTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 40, Short.MAX_VALUE)
         );
         exitBtnLayout.setVerticalGroup(
             exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitBtnLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(exitTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addGap(0, 60, Short.MAX_VALUE)
         );
 
         jPanel2.add(exitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 60));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/autorickshaw.png"))); // NOI18N
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, 220, 200));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -285,6 +282,7 @@ public class Login_Sistem extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
