@@ -13,6 +13,8 @@ import DataTransferObject.AsociacionesDTO;
 import DataTransferObject.ConductoresDTO;
 import DataTransferObject.PropietariosDTO;
 import DataTransferObject.SociosDTO;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collections;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -47,6 +49,23 @@ public class Mototaxis extends javax.swing.JFrame {
     );
         tbl_Asociaciones.setModel(model); // Asigna  el modelo a tu JTabl
     }
+    
+    // Método para validar que una fecha es válida según el formato "dd/MM/yyyy"
+private boolean isFechaValida(String fecha) {
+    SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+    formato.setLenient(false); // No permitir fechas inválidas como 31/02/2024
+    try {
+        formato.parse(fecha); // Intenta convertir la cadena a una fecha
+        return true; // Si lo logra, la fecha es válida
+    } catch (ParseException e) {
+        return false; // Si falla, la fecha no es válida
+    }
+}
+
+    
+    
+    
+    
 
 
     
@@ -1063,7 +1082,17 @@ public class Mototaxis extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
-
+    
+    if (ruc.length() != 11 || !ruc.matches("\\d+")) { // Verifica que tenga exactamente 11 dígitos y que sean solo números
+    JOptionPane.showMessageDialog(this, "El RUC debe tener exactamente 11 dígitos numéricos.", "Error", JOptionPane.ERROR_MESSAGE);
+    return;
+    
+    }
+    if (!isFechaValida(vigencia)) { // Llama al método que valida la fecha
+    JOptionPane.showMessageDialog(this, "La fecha de vigencia debe ser válida y seguir el formato dd/MM/yyyy.", "Error", JOptionPane.ERROR_MESSAGE);
+    return; // Salir si la fecha no es válida
+    
+    }
     // Obtener el modelo de la tabla
     DefaultTableModel model = (DefaultTableModel) tbl_Asociaciones.getModel();
 
