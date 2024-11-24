@@ -146,8 +146,26 @@ public class PropietariosDAO extends Conexion implements Crud<PropietariosDTO>{
     }  
 
     @Override
-    public boolean agregar(PropietariosDTO obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean agregar(PropietariosDTO propietariosDTO) {
+        try {
+             int r=0;
+             conexion=conectar();
+             ps=conexion.prepareCall("execute insertar_propitario ?, ?, ?, ?, ?, ?");
+             ps.setString(1, propietariosDTO.getNombres());
+             ps.setString(2, propietariosDTO.getApellidoPaterno());
+             ps.setString(3,propietariosDTO.getApellidoMaterno());
+             ps.setString(4,propietariosDTO.getDNI());
+             ps.setString(5, propietariosDTO.getVigenciaSoat());
+             ps.setString(6, propietariosDTO.getPlaca());
+             r=ps.executeUpdate();
+             return (r==1);
+         } catch (Exception ex) {
+              System.out.println(ex.getMessage());
+              return false;
+         }
+         finally{
+         cerrar();
+         }
     }
 
     @Override

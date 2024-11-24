@@ -10,7 +10,7 @@ package DataTransferObject;
  * @author Aaron
  */
 public class PropietariosDTO {
-    String Nombres, Apellidos, DNI, Placa, VigenciaSoat;
+    String Nombres, Apellidos, DNI, Placa, VigenciaSoat, ApellidoPaterno, ApellidoMaterno;
     int idPersona, idVehiculo;
 
     public PropietariosDTO() {
@@ -81,4 +81,21 @@ public class PropietariosDTO {
     public void setIdVehiculo(int idVehiculo) {
         this.idVehiculo = idVehiculo;
     }
+
+    public String getApellidoPaterno() {
+        return ApellidoPaterno;
+    }
+
+    public void setApellidoPaterno(String ApellidoPaterno) {
+        this.ApellidoPaterno = ApellidoPaterno;
+    }
+
+    public String getApellidoMaterno() {
+        return ApellidoMaterno;
+    }
+
+    public void setApellidoMaterno(String ApellidoMaterno) {
+        this.ApellidoMaterno = ApellidoMaterno;
+    }
+    
 }
