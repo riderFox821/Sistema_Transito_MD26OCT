@@ -61,7 +61,7 @@ public class Login_Sistem extends javax.swing.JFrame {
         jpanelfondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txticono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/415732918_698225495778006_1119471731745094111_n-removebg-preview (1).png"))); // NOI18N
-        jpanelfondo.add(txticono, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 260, 420, 320));
+        jpanelfondo.add(txticono, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 320, 420, 320));
 
         txtexit.setFont(new java.awt.Font("Segoe UI Semilight", 0, 36)); // NOI18N
         txtexit.setText("X");
@@ -144,7 +144,7 @@ public class Login_Sistem extends javax.swing.JFrame {
         txtfondo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/8785e6c0-a9c2-4a5c-b732-3bfe240ff22a.jpeg"))); // NOI18N
         txtfondo.setText(" ");
-        jpanelfondo.add(txtfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 560, 640));
+        jpanelfondo.add(txtfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 570, 640));
 
         exitBtn.setBackground(new java.awt.Color(255, 255, 255));
         exitBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -172,7 +172,7 @@ public class Login_Sistem extends javax.swing.JFrame {
                 txtlabelmotoMouseMoved(evt);
             }
         });
-        jpanelfondo.add(txtlabelmoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 20, 210, 200));
+        jpanelfondo.add(txtlabelmoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 140));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

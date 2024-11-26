@@ -343,7 +343,7 @@ private boolean isFechaValida(String fecha) {
                                                 .addGap(559, 559, 559))))))
                             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 5279, Short.MAX_VALUE))
+                        .addGap(0, 5116, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -588,9 +588,14 @@ private boolean isFechaValida(String fecha) {
         });
         jPanel3.add(txt_buscar_asociacion_filtro, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 24, 453, 29));
 
-        jLabel22.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(51, 51, 255));
         jLabel22.setText("Buscar Asociacion");
-        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 23, -1, 29));
+        jLabel22.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 30));
+
+        lbl_mensaje_asociaciones.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
+        lbl_mensaje_asociaciones.setForeground(new java.awt.Color(255, 0, 0));
         jPanel3.add(lbl_mensaje_asociaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(662, 25, 217, 34));
 
         jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
@@ -643,7 +648,7 @@ private boolean isFechaValida(String fecha) {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(tbl_filtros, javax.swing.GroupLayout.PREFERRED_SIZE, 6809, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tbl_filtros)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
