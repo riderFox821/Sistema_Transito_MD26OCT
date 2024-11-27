@@ -50,17 +50,17 @@ public class Form_agregar_socio extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("APELLIDOS MATERNOS ");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 180, 30));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 180, 30));
 
         jLabel2.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("NOMBRE");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 90, 40));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 90, 40));
 
         jLabel4.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("APELLIDOS PATERNOS");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 170, 40));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 170, 40));
 
         jLabel5.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -75,13 +75,14 @@ public class Form_agregar_socio extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Leelawadee UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("REGISTRAR SOCIOS");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 190, 50));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 190, 50));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/icons8-gente-trabajando-juntos-48.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 60, 50));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 60, 60));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/icons8-agregar-carpeta-48.png"))); // NOI18N
         jButton1.setText("AGREGAR");
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.green, java.awt.Color.green, java.awt.Color.yellow, java.awt.Color.yellow));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -89,12 +90,18 @@ public class Form_agregar_socio extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 150, 50));
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 210, 40));
+
+        jTextField4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.blue, java.awt.Color.cyan, java.awt.Color.cyan));
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 210, 30));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 210, 40));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 210, 30));
+
+        jTextField3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.blue, java.awt.Color.cyan, java.awt.Color.cyan));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 210, 40));
+
+        jTextField2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.blue, java.awt.Color.cyan, java.awt.Color.cyan));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 210, 30));
 
         jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 51, 255), new java.awt.Color(0, 102, 204)));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 210, 40));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 210, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/Azul Minimalista Original Luz Azul Material De Fondo De Ensueño Ensueño de Pantalla Imagen para Descarga Gratuita - Pngtree.jpeg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 580));

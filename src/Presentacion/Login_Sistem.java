@@ -61,7 +61,7 @@ public class Login_Sistem extends javax.swing.JFrame {
         jpanelfondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txticono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/415732918_698225495778006_1119471731745094111_n-removebg-preview (1).png"))); // NOI18N
-        jpanelfondo.add(txticono, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 320, 420, 320));
+        jpanelfondo.add(txticono, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 320, 440, 320));
 
         txtexit.setFont(new java.awt.Font("Segoe UI Semilight", 0, 36)); // NOI18N
         txtexit.setText("X");
@@ -89,7 +89,7 @@ public class Login_Sistem extends javax.swing.JFrame {
         jseparador1.setForeground(new java.awt.Color(255, 255, 255));
         jpanelfondo.add(jseparador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 300, 30));
 
-        txtmuni.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        txtmuni.setFont(new java.awt.Font("Leelawadee UI", 1, 18)); // NOI18N
         txtmuni.setForeground(new java.awt.Color(255, 255, 255));
         txtmuni.setText("MUNICIPALIDAD 26 DE OCTUBRE ");
         txtmuni.addVetoableChangeListener(new java.beans.VetoableChangeListener() {
@@ -97,7 +97,7 @@ public class Login_Sistem extends javax.swing.JFrame {
                 windowopen(evt);
             }
         });
-        jpanelfondo.add(txtmuni, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 320, 100));
+        jpanelfondo.add(txtmuni, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 320, 50));
 
         txtusuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/ImagenesSistema2024/users_theuser_6177.png"))); // NOI18N
         jpanelfondo.add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, 130, 130));
@@ -380,3 +380,4 @@ animation.start();
     private javax.swing.JLabel txtusuario7;
     // End of variables declaration//GEN-END:variables
 }
+

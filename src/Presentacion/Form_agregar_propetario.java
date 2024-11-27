@@ -69,7 +69,7 @@ public class Form_agregar_propetario extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("PLACA");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 130, 30));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 130, 30));
 
         jLabel7.setFont(new java.awt.Font("Leelawadee UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,24 +77,34 @@ public class Form_agregar_propetario extends javax.swing.JFrame {
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, 50));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/icons8-jefe-64.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 60, 40));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 60, 50));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/icons8-agregar-carpeta-48.png"))); // NOI18N
         jButton1.setText("AGREGAR");
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.green, java.awt.Color.green, java.awt.Color.yellow, java.awt.Color.yellow));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 510, 150, 50));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 210, 40));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 210, 30));
+
+        jTextField6.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 255), new java.awt.Color(0, 0, 255)));
+        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 210, 40));
+
+        jTextField4.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.blue));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 210, 30));
 
         jTextField9.setForeground(new java.awt.Color(204, 204, 255));
         jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField9.setText("Ingrese la fecha de Caducidad");
-        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 174, 38));
+        jTextField9.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.blue));
+        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 174, 40));
+
+        jTextField3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 51, 255), new java.awt.Color(0, 0, 255)));
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 210, 40));
+
+        jTextField2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 255), java.awt.Color.blue));
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 210, 30));
 
         jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 51, 255), new java.awt.Color(0, 102, 204)));
@@ -109,21 +119,24 @@ public class Form_agregar_propetario extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("SOAT");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 72, 38));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 126, 32));
+
+        jTextField7.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 0, 255), new java.awt.Color(0, 0, 255)));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 126, 40));
 
         jLabel12.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("TARJETA DE CIRCULACION");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 207, 40));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 200, 40));
 
         jTextField8.setForeground(new java.awt.Color(204, 204, 255));
         jTextField8.setText("Ingrese la fecha de Emision");
+        jTextField8.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.blue));
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 174, 40));
+        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 174, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/Azul Minimalista Original Luz Azul Material De Fondo De Ensueño Ensueño de Pantalla Imagen para Descarga Gratuita - Pngtree.jpeg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 610));

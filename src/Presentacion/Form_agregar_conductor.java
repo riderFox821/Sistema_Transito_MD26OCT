@@ -69,6 +69,7 @@ public class Form_agregar_conductor extends javax.swing.JFrame {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/icons8-agregar-carpeta-48.png"))); // NOI18N
         jButton1.setText("AGREGAR");
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.green, java.awt.Color.green, java.awt.Color.yellow, java.awt.Color.yellow));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -76,18 +77,30 @@ public class Form_agregar_conductor extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 480, 150, 50));
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 210, 40));
+
+        jTextField4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.blue, java.awt.Color.cyan, java.awt.Color.cyan));
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 210, 30));
+
+        jTextField3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.blue, java.awt.Color.cyan, java.awt.Color.cyan));
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 210, 40));
+
+        jTextField2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.blue, java.awt.Color.cyan, java.awt.Color.cyan));
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 210, 30));
 
         jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 51, 255), new java.awt.Color(0, 102, 204)));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 210, 40));
+
+        jTextField5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.blue, java.awt.Color.cyan, java.awt.Color.cyan));
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 170, 40));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 160, 40));
+
+        jTextField7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.blue, java.awt.Color.cyan, java.awt.Color.cyan));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 170, 40));
+
+        jTextField8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, new java.awt.Color(0, 0, 255), java.awt.Color.cyan, java.awt.Color.cyan));
         getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 170, 30));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/auto (1).png"))); // NOI18N
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 160, 60));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 130, 60));
 
         jLabel11.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
@@ -109,10 +122,10 @@ public class Form_agregar_conductor extends javax.swing.JFrame {
         jLabel10.setText("PLACA");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 80, 30));
 
-        jLabel9.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Leelawadee UI", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("DNI");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 90, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 90, 30));
 
         jLabel2.setFont(new java.awt.Font("Leelawadee UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -122,7 +135,7 @@ public class Form_agregar_conductor extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Leelawadee UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("REGISTRAR CONDUCTOR");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 230, 50));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 230, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Imagenes02/Azul Minimalista Original Luz Azul Material De Fondo De Ensueño Ensueño de Pantalla Imagen para Descarga Gratuita - Pngtree.jpeg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 600));
